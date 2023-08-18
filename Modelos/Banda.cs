@@ -23,6 +23,7 @@ class Banda : IAvaliavel
             return notas.Average(a => a.Nota);
         }
     }
+    public string? Resumo { get; set; }
     public IEnumerable<Album> Albuns => albuns;
 
     public void AdicionarAlbum(Album album) 
