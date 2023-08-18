@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\renata.trintin\\RiderProjects\\Alura-Cs-DominandoOO\\ScreenSound03-projeto-inicial\\ScreenSound\\ScreenSound.csproj": {}
+    "C:\\Users\\renata.trintin\\RiderProjects\\Alura-Cs-DominandoOO\\Alura_ScreeSound\\ScreenSound.csproj": {}
   },
   "projects": {
-    "C:\\Users\\renata.trintin\\RiderProjects\\Alura-Cs-DominandoOO\\ScreenSound03-projeto-inicial\\ScreenSound\\ScreenSound.csproj": {
+    "C:\\Users\\renata.trintin\\RiderProjects\\Alura-Cs-DominandoOO\\Alura_ScreeSound\\ScreenSound.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\renata.trintin\\RiderProjects\\Alura-Cs-DominandoOO\\ScreenSound03-projeto-inicial\\ScreenSound\\ScreenSound.csproj",
+        "projectUniqueName": "C:\\Users\\renata.trintin\\RiderProjects\\Alura-Cs-DominandoOO\\Alura_ScreeSound\\ScreenSound.csproj",
         "projectName": "ScreenSound",
-        "projectPath": "C:\\Users\\renata.trintin\\RiderProjects\\Alura-Cs-DominandoOO\\ScreenSound03-projeto-inicial\\ScreenSound\\ScreenSound.csproj",
+        "projectPath": "C:\\Users\\renata.trintin\\RiderProjects\\Alura-Cs-DominandoOO\\Alura_ScreeSound\\ScreenSound.csproj",
         "packagesPath": "C:\\Users\\renata.trintin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\renata.trintin\\RiderProjects\\Alura-Cs-DominandoOO\\ScreenSound03-projeto-inicial\\ScreenSound\\obj\\",
+        "outputPath": "C:\\Users\\renata.trintin\\RiderProjects\\Alura-Cs-DominandoOO\\Alura_ScreeSound\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\renata.trintin\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -37,6 +37,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "OpenAI": {
+              "target": "Package",
+              "version": "[1.7.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -51,19 +57,19 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.20, 6.0.20]"
+              "version": "[6.0.21, 6.0.21]"
             },
             {
               "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.20, 6.0.20]"
+              "version": "[6.0.21, 6.0.21]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.20, 6.0.20]"
+              "version": "[6.0.21, 6.0.21]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.20, 6.0.20]"
+              "version": "[6.0.21, 6.0.21]"
             }
           ],
           "frameworkReferences": {
@@ -71,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\renata.trintin\\.dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
