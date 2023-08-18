@@ -13,6 +13,14 @@ class MenuExibirDetalhes : Menu
         if (bandasRegistradas.ContainsKey(nomeDaBanda))
         {
             Banda banda = bandasRegistradas[nomeDaBanda];
+            
+            var client = new OpenAIAPI("");
+            var chat = client.Chat.CreateConversation();
+            chat.AppendSystemMessage($"Resuma a banda {nomeDaBanda} em 1 parágrafo de modo informal.");
+            string resposta = chat.GetResponseFromChatbotAsync().GetAwaiter().GetResult();
+            banda.Resumo = resposta;
+            Console.WriteLine(banda.Resumo);
+            
             Console.WriteLine($"\nA média da banda {nomeDaBanda} é {banda.Media} e seus albuns são:");
             Console.WriteLine("Discografia:\n");
             foreach (Album album in banda.Albuns)
