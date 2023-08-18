@@ -1,9 +1,9 @@
 ﻿using ScreenSound.Modelos;
 
 Banda ira = new Banda("Ira");
-ira.AdicionarNota(10);
-ira.AdicionarNota(4);
-ira.AdicionarNota(5);
+ira.AdicionarNota(new Avaliacao(10));
+ira.AdicionarNota(new Avaliacao(4));
+ira.AdicionarNota(new Avaliacao(5));
 Banda cbjr = new Banda("Charlie Brown Jr");
 Banda teste = new("teste");
 
@@ -144,10 +144,10 @@ void AvaliarUmaBanda()
     {
         Banda banda = bandasRegistradas[nomeDaBanda];
         Console.Write($"Qual a nota que a banda {nomeDaBanda} merece: ");
-        int nota = int.Parse(Console.ReadLine()!);
+        Avaliacao nota = Avaliacao.Parse(Console.ReadLine()!);
         banda.AdicionarNota(nota);
-        Console.WriteLine($"\nA nota {nota} foi registrada com sucesso para a banda {nomeDaBanda}");
-        Thread.Sleep(2000);
+        Console.WriteLine($"\nA nota {nota.Nota} foi registrada com sucesso para a banda {nomeDaBanda}");
+        Thread.Sleep(1000);
         Console.Clear();
         ExibirOpcoesDoMenu();
     }
@@ -172,9 +172,6 @@ void ExibirDetalhes()
     {
         Banda banda = bandasRegistradas[nomeDaBanda];
         Console.WriteLine($"\nA média da banda {nomeDaBanda} é {banda.Media}.");
-        /**
-        * ESPAÇO RESERVADO PARA COMPLETAR A FUNÇÃO
-        */
         Console.WriteLine("Digite uma tecla para votar ao menu principal");
         Console.ReadKey();
         Console.Clear();
