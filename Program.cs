@@ -79,7 +79,8 @@ void RegistrarAlbum()
         Banda banda = bandasRegistradas[nomeDaBanda];
         banda.AdicionarAlbum(new Album(tituloAlbum));
         Console.WriteLine($"O álbum {tituloAlbum} de {nomeDaBanda} foi registrado com sucesso!");
-        Thread.Sleep(4000);
+        Console.WriteLine($"Total de objetos criados: {Album.ContadorObjetos}");
+        Thread.Sleep(2000);
         Console.Clear();
         ExibirOpcoesDoMenu();
     }
@@ -87,6 +88,7 @@ void RegistrarAlbum()
     {
         Console.WriteLine($"\nA banda {nomeDaBanda} não foi encontrada!");
         Console.WriteLine("Digite uma tecla para voltar ao menu principal");
+        Console.WriteLine($"Total de objetos criados: {Album.ContadorObjetos}");
         Console.ReadKey();
         Console.Clear();
         ExibirOpcoesDoMenu();
