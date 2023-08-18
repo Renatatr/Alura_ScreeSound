@@ -1,9 +1,9 @@
 ﻿namespace ScreenSound.Modelos;
 
-class Banda
+class Banda : IAvaliavel
 {
     private List<Album> albuns = new List<Album>();
-    public List<Avaliacao> notas = new List<Avaliacao>();
+    private List<Avaliacao> notas = new List<Avaliacao>();
 
     public Banda(string nome)
     {
@@ -23,7 +23,7 @@ class Banda
             return notas.Average(a => a.Nota);
         }
     }
-    public List<Album> Albuns => albuns;
+    public IEnumerable<Album> Albuns => albuns;
 
     public void AdicionarAlbum(Album album) 
     { 
