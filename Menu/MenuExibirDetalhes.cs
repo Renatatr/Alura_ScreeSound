@@ -5,6 +5,12 @@ namespace ScreenSound.Menu;
 
 class MenuExibirDetalhes : Menu
 {
+    public MenuExibirDetalhes(string chave)
+    {
+        Chave = chave;
+    }
+
+    public string Chave { get; }
     public override void Executar(Dictionary<string, Banda> bandasRegistradas)
     {
         base.Executar(bandasRegistradas);
@@ -14,8 +20,8 @@ class MenuExibirDetalhes : Menu
         if (bandasRegistradas.ContainsKey(nomeDaBanda))
         {
             Banda banda = bandasRegistradas[nomeDaBanda];
-            
-            var client = new OpenAIAPI("");
+
+            var client = new OpenAIAPI(Chave);
             var chat = client.Chat.CreateConversation();
             chat.AppendSystemMessage($"Resuma a banda {nomeDaBanda} em 1 parágrafo de modo informal.");
             string resposta = chat.GetResponseFromChatbotAsync().GetAwaiter().GetResult();

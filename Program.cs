@@ -1,6 +1,8 @@
 ﻿using ScreenSound.Menu;
 using ScreenSound.Modelos;
 
+string key = args[1];
+
 Banda ira = new Banda("Ira");
 ira.AdicionarNota(new Avaliacao(10));
 ira.AdicionarNota(new Avaliacao(4));
@@ -18,11 +20,9 @@ opcoes.Add(1,new MenuRegistrarBanda());
 opcoes.Add(2,new MenuRegistrarAlbum());
 opcoes.Add(3,new MenuMostrarBandasRegistradas());
 opcoes.Add(4,new MenuAvaliarBanda());
-opcoes.Add(5,new MenuExibirDetalhes());
+opcoes.Add(5,new MenuExibirDetalhes(key));
 opcoes.Add(6,new MenuAvaliarAlbum());
 opcoes.Add(-1,new MenuSair());
-
-
 
 void ExibirLogo()
 {
